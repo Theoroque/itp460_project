@@ -1,0 +1,146 @@
+li, a , ul {
+	margin:0px;
+	padding:0px;
+}
+
+#container {
+	width:900px;
+	margin:auto;
+	padding:20px;
+	
+}
+
+#header {
+	font-family:Century Gothic;
+	font-weight:normal;
+	font-size:20px;
+	color:#694723;
+}
+
+#nav {
+	font-family:Impact;
+	margin:0px 0px 0px -21px;
+	background-color:#ED8821;
+	width:941px;
+	height:40px;
+	
+}
+
+	.nav-selected {
+		color:white;
+		font-family:Impact;
+	}
+	
+	#nav ul {
+		list-style-type:none;
+	}
+	
+	#nav a {
+		color:black;
+		text-decoration:none;
+	}
+
+	#nav li {
+		float:left;
+		width:154px;
+		height:40px;
+		text-align:center;
+		margin:6px 0px 0px 2px;
+		
+	}
+	
+	
+	
+
+#search {
+	font-family:Impact;
+	border-radius:20px;
+	margin:50px 0px 0px 340px;
+	float:left;
+}
+
+#header-img {
+	margin:40px 15px 15px 10px;
+	border-radius:15px;
+	width:550px;
+}
+
+#clear {
+	clear:both;
+}
+
+#slideshow {
+	float:left;
+}
+
+#blurb {
+	width:250px;
+	height:335px;
+	float:left;
+	margin:40px 0px 15px 10px;
+	padding:15px;
+	font-family:Century Gothic;
+	background-color:#F0F3E2;
+}
+
+	#blurb-header {
+		margin:-15px 0px 0px -16px;
+		padding:10px 0px 0px 0px;
+		width:112%;
+		height:40px;
+		background-color:#C5E4DF;
+	}
+	
+	#blurb-title {
+		margin:0px 0px 0px 15px;
+		color:#D7964B;
+	}
+
+#footer {
+	list-style-type:none;
+	margin:30px 0px 10px 250px;
+	font-family:Calibri;
+}
+	#footer a {
+		color:#714B24;
+		text-decoration:none;
+		font-weight:bold;
+	}
+
+	#footer li {
+		width:120px;
+		float:left;
+	}
+	
+	.footer-pipeline {
+		margin:0px 0px 0px 10px;
+	}
+	
+#title {
+	float:left;
+}
+ 
+#articles {
+	font-family:Georgia;
+	color:#666666;
+}
+
+	.article-header {
+		font-family:Century Gothic;
+	}
+	
+	.article-date {
+		margin:0px 0px 0px 10px;
+		font-size:10px;
+	}
+	
+	.article-image {
+		border-radius:15px;
+	}
+	
+	.article-imagewithcaption {
+		text-align:center;
+		font-size:13px;
+		width:400px;
+		margin:0px 0px 0px 200px;
+	}

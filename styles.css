@@ -1,62 +1,68 @@
-li, a , ul {
+body, header, li, a , ul {
 	margin:0px;
 	padding:0px;
 }
 
+body {
+	font-family:'CaviarDreamsRegular';
+}
+
 #container {
-	width:900px;
+	width:942px;
 	margin:auto;
-	padding:20px;
-	
 }
 
 #header {
-	font-family:Century Gothic;
+	font-family:'CaviarDreamsRegular';
 	font-weight:normal;
 	font-size:20px;
-	color:#694723;
+	color:#666;
+	padding:0;
 }
 
 #nav {
-	font-family:Impact;
-	margin:0px 0px 0px -21px;
-	background-color:#ED8821;
-	width:941px;
+	font-family:'CaviarDreamsRegular';
+	margin:0px 0px 0px 0px;
+	width:942px;
 	height:40px;
 	
 }
 
-	.nav-selected {
-		color:white;
-		font-family:Impact;
-	}
-	
-	#nav ul {
-		list-style-type:none;
-	}
-	
-	#nav a {
-		color:black;
-		text-decoration:none;
-	}
+#nav *{
+	margin: 0;
+	padding:0;
+}
 
-	#nav li {
+#nav li{
+	float: left;
+	list-style: none;
+}
+
+#nav li a {
 		float:left;
-		width:154px;
-		height:40px;
+		width:137px;
+		height:20px;
 		text-align:center;
-		margin:6px 0px 0px 2px;
+		background-color:#F96;
+		color:#FFF;
+		text-decoration:none;
+		padding:10px;
 		
 	}
 	
-	
-	
+#nav li a:hover {
+		color:#333;
+		background-color:#FC9;
 
+	}
+	
 #search {
-	font-family:Impact;
-	border-radius:20px;
-	margin:50px 0px 0px 340px;
-	float:left;
+	font-family:arial;
+	font-size:10pt;
+	color:#999;
+	border-radius:10px;
+	margin:30px 0px 0px 0px;
+	float:right;
 }
 
 #header-img {
@@ -121,12 +127,14 @@ li, a , ul {
 }
  
 #articles {
-	font-family:Georgia;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1em;
 	color:#666666;
 }
 
 	.article-header {
-		font-family:Century Gothic;
+		font-family:'CaviarDreamsRegular';
+		color:#F63;
 	}
 	
 	.article-date {
@@ -144,3 +152,127 @@ li, a , ul {
 		width:400px;
 		margin:0px 0px 0px 200px;
 	}
+
+.sections-fruity {
+	width:225px;
+	margin:5px;
+	height:300px;
+	background-color:pink;
+	float:left;
+	border-radius:10px;
+	background-image:url(imgs/Candice%20Dalan%20About%20Me%202.jpg);
+	background-size:150%;
+}
+
+.sections-family {
+	width:225px;
+	margin:5px;
+	height:300px;
+	background-color:pink;
+	float:left;
+	border-radius:10px;
+	background-image:url(imgs/beauty-hairdye.jpg);
+	background-size:200%;
+	background-position:center;
+}
+
+.sections-beauty {
+	width:225px;
+	margin:5px;
+	height:300px;
+	background-color:pink;
+	float:left;
+	border-radius:10px;
+	background-image:url(imgs/Candice%20Dalan%20Make%20Up.jpg);
+	background-size:200%;
+	background-position:right;
+}
+
+.sections-beyond {
+	width:225px;
+	margin:5px;
+	height:300px;
+	background-color:pink;
+	float:left;
+	border-radius:10px;
+	background-image:url(imgs/Candice%20Dalan%20Lane.jpg);
+	background-size:200%;
+	background-position:center;
+}
+
+.hovereffect {
+	width:205px;
+	height:280px;
+	border-radius:10px;
+	background-color:rgba(255,177,64,0);
+	color:rgba(255,255,255,0);
+	padding:10px;
+	font-size:3em;
+
+}
+
+.hovereffect:hover {
+	width:205px;
+	height:280px;
+	border-radius:10px;
+	color:rgba(255,255,255,1);
+	background-color:rgba(255,177,64,0.6);
+	color:rgb(255,255,255);
+	padding:10px;
+	cursor:pointer;
+}
+
+.slideshow {
+	width:942px;
+	height:450px;
+	border-radius:10px;
+	background-image:url(imgs/Candice%20Dalan%20Foodie%2011.jpg);
+	background-size:100%;
+	background-position:center;
+}
+
+.slideshowtext {
+	background-color:rgba(255,177,64,0.7);
+	color:rgb(255,255,255);
+	width:942px;
+	height:100px;
+	position:relative;
+	padding:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+
+}
+
+.slideshowtext .heading {
+	font-size:3em;
+	margin:10px 10px 0px 10px;
+}
+
+.slideshowtext .bodytext {
+	font-size:1em;
+	margin:10px 10px 0px 10px;
+}
+
+.mycarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.mycarousel ul {
+    width: 942px;
+	height: 450px;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mycarousel li {
+    float: left;
+}
+
+.mycarousel img {
+	width:942px;
+	height:600px;
+}
+

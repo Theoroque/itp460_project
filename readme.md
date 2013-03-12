@@ -2,3 +2,6 @@
 
 ## Team Members
 
+## Instructor
+* David Tang
+

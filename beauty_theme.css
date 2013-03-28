@@ -3,6 +3,10 @@ body, header, li, a , ul {
 	padding:0px;
 }
 
+a {
+	text-decoration:none;
+}
+
 body {
 	font-family:'CaviarDreamsRegular';
 }
@@ -40,7 +44,7 @@ body {
 
 #nav li a {
 		float:left;
-		width:137px;
+		width:114px;
 		height:20px;
 		text-align:center;
 		background-color:rgb(255,0,255);

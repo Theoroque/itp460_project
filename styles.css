@@ -48,8 +48,10 @@ body {
 }
 
 #nav {
-	font-family:'CaviarDreamsRegular';
-	margin:0px 0px 0px 0px;
+	font-family:Impact;
+	font-size:25px;
+	
+	margin-bottom:20px;
 	width:942px;
 	height:40px;
 	
@@ -71,10 +73,10 @@ body {
 		width:114px;
 		height:20px;
 		text-align:center;
-		background-color:#F96;
 		color:#FFF;
 		text-decoration:none;
-		padding:10px;
+		padding:10px 10px 15px 10px;
+		background-image:url(imgs/nav-background.png);
 		
 	}
 	
@@ -89,7 +91,12 @@ body {
 	}
 	
 	.nav-selected {
-		background-color:#FC9 !important;
+		 background-color: white !important;
+		 background-image:url(imgs/nav-selected.jpg) !important;
+		 background-repeat:no-repeat;
+		 background-position:left bottom;
+		 color:#694723 !important;
+		 
 	}
 	
 	

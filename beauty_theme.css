@@ -43,7 +43,7 @@ body {
 		width:137px;
 		height:20px;
 		text-align:center;
-		background-color:rgb(255,0,255);
+		background-color:#F96;
 		color:#FFF;
 		text-decoration:none;
 		padding:10px;
@@ -52,7 +52,7 @@ body {
 	
 #nav li a:hover {
 		color:#333;
-		background-color:rgb(255, 105, 180)	
+		background-color:#FC9;
 
 	}
 	
@@ -74,26 +74,6 @@ body {
 #clear {
 	clear:both;
 }
-
-#footer {
-	list-style-type:none;
-	margin:30px 0px 10px 250px;
-	font-family:Calibri;
-}
-	#footer a {
-		color:#714B24;
-		text-decoration:none;
-		font-weight:bold;
-	}
-
-	#footer li {
-		width:120px;
-		float:left;
-	}
-	
-	.footer-pipeline {
-		margin:0px 0px 0px 10px;
-	}
 	
 #title {
 	float:left;
@@ -142,23 +122,24 @@ body {
 	
 }
 
+	/* properties over the thumbanils */
 
 .hovereffect_thumbnail {
 	width:280px;
-	height:105px;
-	margin-top:100px;
 	border-radius:10px;
 	background-color:rgba(255,0,255,0);
 	color:rgba(255,255,255,0);
 	padding:10px;
-	font-size:3em;
+	font-size:2em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 
 }
 
 .hovereffect_thumbnail:hover {
 	width:280px;
-	height:105px;
-	margin-top:100px;
+	height:auto;
 	border-radius:10px;
 	color:rgba(255,255,255,1);
 	background-color:rgba(255,0,255,0.6);
@@ -166,33 +147,8 @@ body {
 	padding:10px;
 	cursor:pointer;
 }
-
-
-.feature_title:hover {
-	width:600px;
-	height:105px;
-	border-radius:10px;
-	margin-top:250px;
-	color:rgba(255,255,255,1);
-	background-color:rgba(255,0,255,0.6);
-	color:rgb(255,255,255);
-	padding:5px;
-	cursor:pointer;
-}
-
-.feature_title {
-	width:600px;
-	height:105px;
-	margin-top:250px;
-	border-radius:10px;
-	background-color:rgba(255,177,64,0);
-	color:rgba(255,255,255,0);
-	padding:5px;
-	font-size:2.5em;
-
-}
-
-
+			/*the Featured article and background images*/
+			
 .feature_landing {
 	width:600px;
 	height:450px;
@@ -207,7 +163,44 @@ body {
     float:left;
 }
 
-/*location of the box and properties of topic and social media boxes*/
+			/* Title of the Featured article */
+
+.feature_title {
+	width:590px;
+	height:105px;
+	margin-top:250px;
+	border-radius:10px;
+	background-color:rgba(255,177,64,0);
+	color:rgba(255,255,255,0);
+	padding:5px;
+	font-size:2.5em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+
+.feature_title:hover {
+	width:590px;
+	height:105px;
+	border-radius:10px;
+	margin-top:250px;
+	color:rgba(255,255,255,1);
+	background-color:rgba(255,0,255,0.6);
+	color:rgb(255,255,255);
+	padding:5px;
+	cursor:pointer;
+}
+
+#date {
+	font-size:.5em;
+	text-align:right;
+}
+
+
+
+
+
+			/*location of the box and properties of topic and social media boxes*/
 .topic_title {
 	width:320px;
 	height:450px;
@@ -221,7 +214,7 @@ body {
 
 }
 
-/*the small blurb in a darker box*/
+			/*the small blurb in a darker box*/
 
 .topic_blurb {
 	background-color:rgba(255,0,255,0.6);
@@ -238,27 +231,21 @@ body {
 	font-size:3em;
 	margin:10px 10px 10px 10px;
 	font-weight:bold;
-	
 }
 
+			/*more blog posts*/
+			
 .more_heading {
 	font-size:1em;
-	margin:10px 10px 10px 10px;	
+	margin-left:10px;
 }
 
-#next_heading {
-	font-size:.75em;
-	margin:0px 10px 0px 10px;	
-	text-align:left;
-	float:right;
-}
-
+			/*featured blog posts*/
+		
 .feature_heading {
 	font-size:3em;
 	margin:10px 10px 0px 10px;
 }
-
-
 
 .feature_top {
 	background-color:rgba(255,0,255,0.7);
@@ -267,11 +254,38 @@ body {
 	height:50px;
 	position:relative;
 	padding:10px;
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
+	border-radius:10px;
 }
 
-.landing_text .heading {
-	font-size:3em;
-	margin:10px 10px 0px 10px;
+			/*next button*/
+		
+#next_heading {
+	font-size:.75em;
+	margin:0px 10px 0px 10px;	
+	text-align:left;
+	float:right;
 }
+
+
+			/*footer*/
+
+
+#footer {
+	list-style-type:none;
+	margin:30px 0px 10px 250px;
+	font-family:Calibri;
+}
+	#footer a {
+		color:#714B24;
+		text-decoration:none;
+		font-weight:bold;
+	}
+
+	#footer li {
+		width:120px;
+		float:left;
+	}
+	
+	.footer-pipeline {
+		margin:0px 0px 0px 10px;
+	}

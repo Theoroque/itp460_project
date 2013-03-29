@@ -32,31 +32,44 @@ body {
 	
 }
 
-#nav *{
-	margin: 0;
-	padding:0;
-}
+	#nav li {
+		float:left;
+		width:132px;
+		height:40px;
+		text-align:center;
+		margin:6px 0px 0px 2px;
 
-#nav li{
-	float: left;
-	list-style: none;
-}
+	}
 
-#nav li a {
+
+	#nav li a {
 		float:left;
 		width:114px;
 		height:20px;
 		text-align:center;
-		background-color:#F96;
 		color:#FFF;
 		text-decoration:none;
-		padding:10px;
-		
+		padding:10px 10px 15px 10px;
+		background-image:url(imgs/nav-background.png);
+
 	}
-	
-#nav li a:hover {
+
+	#nav li a:hover {
 		color:#333;
 		background-color:#FC9;
+
+	}
+
+	#nav ul {
+		list-style-type:none;
+	}
+
+	.nav-selected {
+		 background-color: white !important;
+		 background-image:url(imgs/nav-selected.jpg) !important;
+		 background-repeat:no-repeat;
+		 background-position:left bottom;
+		 color:#694723 !important;
 
 	}
 	

@@ -1,26 +1,15 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link href="styles.css" rel="stylesheet"/>
 	<link href="beyond_theme.css" rel="stylesheet"/>
     <link href="libre-baskerville-fontfacekit/stylesheet.css" rel="stylesheet"/>
 	<title>FFTF | Beyond</title>
 
-<script src="jquery-latest.js"></script>
-<script type="text/javascript" src="jquery.jcarousel.min.js"></script>
-
 <link rel="stylesheet" type="text/css" href="skin.css" />
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#mycarousel').jcarousel({
-		auto: 4,
-		wrap: 'last'
-	});
-});
-
-</script>
     
 </head>
 
@@ -30,8 +19,8 @@ $(document).ready(function() {
 
 <div id="header">
 
-	<h1 id="title" >From Foodie To Fruity</h1>
-
+	<h1 id="title" ><a href="home.html"><img src="imgs/header.png" /></a></h1>
+	<img src="imgs/organic.png" id="logo" />
 	<input type="text" value="   Search" id="search">
 	
 </div>
@@ -142,6 +131,12 @@ $(document).ready(function() {
 	</ul>
 
 </div>
+
+<script src="http://webdev.usc.edu/jquery.js"></script>
+<script type="text/javascript" src="slideshow.js"></script>
+<script>
+slideshow("beyond");
+</script>
 
 </body>
 

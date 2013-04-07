@@ -1,77 +1,91 @@
-/*$("#slideshow-button").bind("click",function() {
-	
-})
-*/
-var index = 0;
-var lessonclothes = new Array
-lessonclothes[0] = "imgs/beauty-cheapdress.png";
-lessonclothes[1] = "imgs/beauty-cheapdress-walking.png";
-lessonclothes[2] = "imgs/beauty-cheapdress-twins.png";
-lessonclothes[3] = "imgs/beauty-cheapdress-fiancentwin.png";
-lessonclothes[4] = "imgs/beauty-cheapdress-hawaii.png";
-lessonclothes[5] = "imgs/beauty-cheapdress-networking.png";
-lessonclothes[6] = "imgs/beauty-cheapdress-mom.png";
-lessonclothes[7] = "imgs/beauty-cheapdress-baby.png";
-lessonclothes[8] = "imgs/beauty-cheapdress-knotts.png";
+var fruity_slides = new Array;
+fruity_slides[0] = "fruity-landing-header";
+fruity_slides[1] = "fruity-landing-slice";
+fruity_slides[2] = "fruity-landing-twored";
+fruity_slides[3] = "fruity-landing-drink";
 
-var lessonclothesCaption = new Array
-lessonclothesCaption[0] = "I am second from the right, sitting next to my always beautiful and ageless mother."; 
-lessonclothesCaption[1] = " I am on the right.";
-lessonclothesCaption[2] = "In Taiwan, no less! Here I am with my twin sister. You know which one I am.";
-lessonclothesCaption[3] = "With my twin and fiance.";
-lessonclothesCaption[4] = "At a luau in Hawaii.";
-lessonclothesCaption[5] = "At a networking event in Los Angeles.";
-lessonclothesCaption[6] = "At a garden lunch with my mom.";
-lessonclothesCaption[7] = "Sightseeing in Tawaian (with my baby nephew).";
-lessonclothesCaption[8] = "At Knotts Berry Farm.";
+var family_slides = new Array;
+family_slides[0] = "family-header";
+family_slides[1] = "family-landing-flowers";
+family_slides[2] = "family-landing-wedding";
+family_slides[3] = "family-landing-mag";
 
-var lessonclothes_captions = new Array
+var beauty_slides = new Array;
+beauty_slides[0] = "beauty-landing-header";
+beauty_slides[1] = "beauty-landing-makeup";
+beauty_slides[2] = "beauty-landing-mask";
+beauty_slides[3] = "beauty-landing-wings";
 
-var beginSlideshow = function() {
-	temp = "<img src='" + lessonclothes[index] + "' class='article-image' 	 />";
-	temp = temp + "<br />";
-	temp = temp + "<a href='#' id='back' onClick='back()' >-Back-</a>";
-	temp = temp + "<span class='article-caption'>" + lessonclothesCaption[index] + "</span>";
-	temp = temp + "<a href='#' id='next' onClick='next()' >-Next-</a>";
-	$("#slideshow img").hide();
-	document.getElementById("slideshow").innerHTML = temp;
+var house_slides = new Array;
+house_slides[0] = "house-landing-header";
+house_slides[1] = "family-landing-mag";
+house_slides[2] = "fruity-landing-slice";
+house_slides[3] = "family-landing-flowers";
+
+var beyond_slides = new Array;
+beyond_slides[0] = "beyond-landing-dragonfly";
+beyond_slides[1] = "beauty-landing-wings";
+beyond_slides[2] = "family-landing-wedding";
+beyond_slides[3] = "family-landing-flowers";
+
+var i = 1;
+
+var slideshow = function(section) {
+
+
+setTimeout(function() {
+
+$('.feature_landing').hide();
+
+if(section == "fruity") {
+$('.feature_landing').css('background-image','url(imgs/' + fruity_slides[i] + '.jpg)');	
 }
 
-var next = function() {
-
-$("#slideshow").hide();
-
-index = index + 1;
-if(index == lessonclothes.length) {
-	index = 0;
-}
-temp = "<img src='" + lessonclothes[index] + "' class='article-image' 	 />";
-	temp = temp + "<br />";
-	temp = temp + "<a href='#' id='back' onClick='back()' >-Back-</a>";
-	temp = temp + "<span class='article-caption'>" + lessonclothesCaption[index] + "</span>";
-	temp = temp + "<a href='#' id='next' onClick='next()' >-Next-</a>";
-	document.getElementById("slideshow").innerHTML = "";
-	document.getElementById("slideshow").innerHTML = temp;
-	
-	$("#slideshow").fadeIn(500);
+if(section == "family") {
+$('.feature_landing').css('background-image','url(imgs/' + family_slides[i] + '.jpg)');	
 }
 
-var back = function() {
-
-$("#slideshow").hide();
-
-index = index - 1;
-if(index == -1) {
-	index = lessonclothes.length-1;
+if(section == "beauty") {
+$('.feature_landing').css('background-image','url(imgs/' + beauty_slides[i] + '.jpg)');	
 }
-temp = "<img src='" + lessonclothes[index] + "' class='article-image' 	 />";
-	temp = temp + "<br />";
-	temp = temp + "<a href='#' id='back' onClick='back()' >-Back-</a>";
-	temp = temp + "<span class='article-caption'>" + lessonclothesCaption[index] + "</span>";
-	temp = temp + "<a href='#' id='next' onClick='next()' >-Next-</a>";
-	document.getElementById("slideshow").innerHTML = "";
-	document.getElementById("slideshow").innerHTML = temp;
-	
-	$("#slideshow").fadeIn(500);
+
+if(section == "house") {
+$('.feature_landing').css('background-image','url(imgs/' + house_slides[i] + '.jpg)');	
+}
+
+if(section == "beyond") {
+$('.feature_landing').css('background-image','url(imgs/' + beyond_slides[i] + '.jpg)');	
+}
+
+$('.feature_landing').fadeIn();
+
+i++;
+
+if(i == 4) {
+	i = 0;
+}
+
+if(i < 4) {
+	slideshow(section);
 	
 }
+
+}, 3500);
+
+}
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+

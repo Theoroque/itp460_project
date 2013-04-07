@@ -8,24 +8,7 @@
     <link href="libre-baskerville-fontfacekit/stylesheet.css" rel="stylesheet"/>
 	<title>FFTF | Home </title>
 
-<script src="jquery-latest.js"></script>
-<script type="text/javascript" src="jquery.jcarousel.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="skin.css" />
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#mycarousel').jcarousel({
-		auto: 4,
-		wrap: 'last'
-	});
-});
-
-</script>
-
-
-    
+	<link rel="stylesheet" type="text/css" href="skin.css" />
 </head>
 
 <body>
@@ -34,9 +17,10 @@ $(document).ready(function() {
 
 <div id="header">
 
-	<h1 id="title" >From Foodie To Fruity</h1>
+	<h1 id="title" ><a href="home.html"><img src="imgs/header.png" /></a></h1>
+	<img src="imgs/organic.png" id="logo" />
+	<input type="text" value="   Search" id="search" />
 	
-	<input type="text" value="   Search" id="search">
 	
 </div>	
 
@@ -66,7 +50,8 @@ $(document).ready(function() {
 			<p class="bodytext">Wafer croissant pie biscuit dragée sugar plum tart pastry. Sweet roll powder fruitcake biscuit chocolate cake lollipop oat cake. Oat cake chupa chups sweet roll applicake donut candy wypas toffee sesame snaps. Caramels ice cream cupcake.
         	</p>
 	</div>
-</div></li>
+	</div>
+</li>
 
     <li><div class="slideshow">
     <div class="slideshowtext">
@@ -115,6 +100,17 @@ $(document).ready(function() {
 </div>
 
 </div>
+
+<div id="clear"></div>
+
+<span id="connect">Connect With Us!</span>
+
+<div id="icons">
+	<a href="#"><img src="imgs/GooglePlus.png"></a>
+	<a href="#"><img src="imgs/Facebook.png"></a>
+	<a href="#"><img src="imgs/Pinterest.png"></a>
+	<a href="#"><img src="imgs/Twitter.png"></a>
+</div>
 	
 </div>
 
@@ -126,6 +122,18 @@ $(document).ready(function() {
 	</ul>
 
 </div>
+
+<script src="jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.jcarousel.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#mycarousel').jcarousel({
+		auto: 4,
+		wrap: 'last'
+	});
+
+</script>
 
 </body>
 

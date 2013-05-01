@@ -1,0 +1,62 @@
+#container
+  #header
+    #title
+      = link_to image_tag( 'header.png'), root_url
+    = image_tag 'organic.png', :id => 'logo'
+  .clear
+  #nav
+    %ul
+      %li
+        =link_to 'HOME',  root_url, :class => "nav-selected"
+      %li
+        =link_to 'ABOUT',  about_url
+      %li
+        =link_to 'FRUITY',  fruity_url
+      %li
+        =link_to 'FAMILY',  family_url
+      %li
+        =link_to 'BEAUTY',  beauty_url
+      %li
+        =link_to 'HOUSE', house_url
+      %li
+        =link_to 'BEYOND',  beyond_url
+    .clear
+
+  %ul#mycarousel.jcarousel-skin-tango
+    - for article in @featured
+      %li{:onclick => "window.location = 'http://candicedalan.getraft.com#{blog_path(article)}'"}
+        .slideshow{:style => "background-image:url(#{article.mainPhoto});"}
+          .slideshowtext
+            %p.heading
+              = article.title.upcase
+            %p.bodytext
+              = article.created_at.strftime("%B #{article.created_at.day.ordinalize}, %Y")
+
+  .clear
+  #sections
+    .sections-fruity{:onclick => "window.location = '#{fruity_url}'"}
+      .hovereffect FROM FOODIE TO FRUITY
+    .sections-family{:onclick => "window.location = '#{family_url}'"}
+      .hovereffect FAMILY
+    .sections-beauty{:onclick => "window.location = '#{beauty_url}'"}
+      .hovereffect BEAUTY
+    .sections-beyond{:onclick => "window.location = '#{beyond_url}'"}
+      .hovereffect AND BEYOND
+  .clear
+  %span#connect Connect With Us!
+  #icons
+    %a{:href => "https://plus.google.com/109840101272283641761/posts"}
+      = image_tag 'GooglePlus.png'
+    %a{:href => "#"}
+      = image_tag 'Facebook.png'
+    %a{:href => "#"}
+      = image_tag 'Pinterest.png'
+    %a{:href => "#"}
+      = image_tag 'Twitter.png'
+.clear
+
+:javascript
+  $('#mycarousel').jcarousel({
+  auto: 4,
+  wrap: 'last'
+  });

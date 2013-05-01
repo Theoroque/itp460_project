@@ -1,0 +1,45 @@
+#container
+  #header
+    #title
+      = link_to image_tag( 'header.png'), root_url
+    = image_tag 'organic.png', :id => 'logo'
+  .clear
+  #nav
+    %ul
+      %li
+        =link_to 'HOME',  root_url
+      %li
+        =link_to 'ABOUT',  about_url, :class => "nav-selected"
+      %li
+        =link_to 'FRUITY',  fruity_url
+      %li
+        =link_to 'FAMILY',  family_url
+      %li
+        =link_to 'BEAUTY',  beauty_url
+      %li
+        =link_to 'HOUSE', house_url
+      %li
+        =link_to 'BEYOND',  beyond_url
+    .clear
+  #main
+    #slideshow
+      = image_tag 'about-header.jpg', :id => 'header-img'
+    .clear
+    %hr/
+    #article-title-background
+    #article-title
+      %h2.article-header
+        A Brief Introduction
+        %br/
+        %span.article-date TUESDAY, SEPTEMBER 18, 2012
+    #about-description
+      Welcome to From Foodie 2 Fruity! This website is written by twin sisters who have both drastically transformed their health and lives in the last few years by embracing a plant-based diet and natural lifestyle. Even though Candice and Christine currently live on opposite coasts of the U.S., their shared passion for enjoying a vibrant and colorful life keeps their hearts as close as ever.
+    #article-body
+      %p
+        %span.first-word> Hello
+        \. My name is Candice Dalan and I am a true Aquarian: free-spirited, independent, and intellectual. I love all things whimsical, colorful, and creative.
+      %p
+        I am on a journey to make my time here on Earth worthwhile. I believe everyone has a life purpose and I am close to finding mine. I want a space to document the crazy things I've learned about life and to connect with those on the same wave length. I want to share my revelations and not feel so crazy for feeling the way I do about things, for seeing things the way I do. I will write about jobs, my high-carb/low-fat vegan lifestyle, relationships, personal development, minimalism, and everything in between.
+      .article-img-cap
+        = image_tag 'about-selfp.jpg', :id => 'article-img'
+    %hr/

@@ -1,0 +1,24 @@
+%h1 All Images
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Image
+      %th Title
+      %th Url
+      %th Options
+  %tbody
+    - @images.each do |image|
+      %tr
+        %td= image.id
+        %td= image_tag image.image_url(:thumb)
+        %td= image.title
+        %td= "http://candicedalan.getraft.com" + image.image_url()
+        %td
+          = link_to 'Show', image
+          = link_to 'Edit', edit_image_path(image)
+          = link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }
+
+
+= link_to 'New Image', new_image_path

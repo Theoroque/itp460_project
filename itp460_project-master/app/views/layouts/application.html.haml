@@ -1,0 +1,66 @@
+!!!
+%html
+  %head
+    %title From Foodie To Fruity
+    - if controller.controller_name == "admin" || controller.controller_name == "images" || controller.controller_name == "comments" || controller.controller_name == "articles"
+      = stylesheet_link_tag    "application-admin", :media => "all"
+      = javascript_include_tag "application-admin"
+      = csrf_meta_tags
+    -else
+      = stylesheet_link_tag "application", :media => "all"
+      = javascript_include_tag "application"
+      = csrf_meta_tags
+  %body
+    - if controller.controller_name == "admin" || controller.controller_name == "images" || controller.controller_name == "comments" || controller.controller_name == "articles"
+      - if !user_signed_in?
+        = yield
+      - else
+        .navbar.navbar-inverse.navbar-fixed-top
+          .navbar-inner
+            .container-fluid
+              %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              = link_to "Candice Dalan", root_path, :class => "brand"
+              .nav-collapse.collapse
+                %p.navbar-text.pull-right
+                  #{link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link"}
+
+        .container-fluid
+          .row-fluid
+            .span2
+              .well.sidebar-nav
+                %ul.nav.nav-list
+                  %li.nav-header Blog Posts
+                  %li
+                    = link_to 'View Blogs', articles_path
+                  %li
+                    = link_to 'New Blog', new_article_path
+                  / %li.nav-header Content
+                  / %li
+                  /   %a{:href => "#"} About
+                  / %li
+                  /   %a{:href => "#"} Fruity
+                  / %li
+                  /   %a{:href => "#"} Family
+                  / %li
+                  /   %a{:href => "#"} Beauty
+                  / %li
+                  /   %a{:href => "#"} House
+                  / %li
+                  /   %a{:href => "#"} Beyond
+                  %li.nav-header Comments
+                  %li
+                    = link_to 'View Comments', comments_path
+                  %li.nav-header Images
+                  %li
+                    = link_to 'View Images', images_path
+                  %li
+                    = link_to 'New Images', new_image_path
+
+            .span10
+              = yield
+
+    - else
+      = yield

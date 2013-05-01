@@ -1,0 +1,37 @@
+@font-face {
+    font: {
+        family: 'LibreBaskervilleRegular';
+        weight: 'normal';
+        style: 'normal';
+    }
+    src: asset-url('LibreBaskerville-Regular-webfont.eot', font);
+    src: asset-url('LibreBaskerville-Regular-webfont.eot', font) format('embedded-opentype'),
+        asset-url('LibreBaskerville-Regular-webfont.woff', font) format('woff'),
+        asset-url('LibreBaskerville-Regular-webfont.ttf', font) format('truetype'),
+        asset-url('LibreBaskerville-Regular-webfont.svg#LibreBaskervilleRegular', font) format('svg')
+}
+
+@font-face {
+    font: {
+        family: 'LibreBaskervilleItalic';
+        weight: 'normal';
+        style: 'normal';
+    }
+    src: asset-url('LibreBaskerville-Italic-webfont.eot', font);
+    src: asset-url('LibreBaskerville-Italic-webfont.eot', font) format('embedded-opentype'),
+        asset-url('LibreBaskerville-Italic-webfont.woff', font) format('woff'),
+        asset-url('LibreBaskerville-Italic-webfont.ttf', font) format('truetype'),
+        asset-url('LibreBaskerville-Italic-webfont.svg#LibreBaskervilleItalic', font) format('svg')
+}
+@font-face {
+    font: {
+        family: 'LibreBaskervilleBold';
+        weight: 'normal';
+        style: 'normal';
+    }
+    src: asset-url('LibreBaskerville-Bold-webfont.eot', font);
+    src: asset-url('LibreBaskerville-Bold-webfont.eot', font) format('embedded-opentype'),
+        asset-url('LibreBaskerville-Bold-webfont.woff', font) format('woff'),
+        asset-url('LibreBaskerville-Bold-webfont.ttf', font) format('truetype'),
+        asset-url('LibreBaskerville-Bold-webfont.svg#LibreBaskervilleBold', font) format('svg')
+}

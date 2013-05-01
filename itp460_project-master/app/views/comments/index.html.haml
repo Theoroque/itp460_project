@@ -1,0 +1,23 @@
+%h1 Listing all Comments
+
+%table.table.table-bordered
+  %th Article
+  %th User Name
+  %th Comment
+  %th Approved
+  %th Options
+
+  - @comments.each do |comment|
+    %tr
+      %td= comment.article.title
+      %td= comment.name
+      %td= comment.comment
+      %td= comment.approved
+      %td
+        = link_to 'Show', comment
+        = link_to 'Edit', edit_comment_path(comment)
+        = link_to 'Destroy', comment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Comment', new_comment_path

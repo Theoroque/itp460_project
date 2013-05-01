@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Comment:
+  = @comment.comment
+%p
+  %b Approved:
+  = @comment.approved
+%p
+  %b Article:
+  = @comment.article.id
+%p
+  %b Name:
+  = @comment.name
+
+= link_to 'Edit', edit_comment_path(@comment)
+\|
+= link_to 'Back', comments_path

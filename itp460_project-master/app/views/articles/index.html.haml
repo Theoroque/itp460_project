@@ -1,0 +1,19 @@
+%h1 Listing blogs
+
+%table.table.table-bordered
+  %tr
+    %th Date
+    %th Category
+    %th Title
+    %th Options
+
+  - @articles.each do |article|
+    %tr
+      %td= article.created_at.strftime("%B #{article.created_at.day.ordinalize}, %Y")
+      %td= Category.find_by_id(article.category_id).name
+      %td= article.title
+      %td
+        = link_to 'Edit', edit_article_path(article)
+        = link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br

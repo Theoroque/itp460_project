@@ -1,0 +1,54 @@
+Started GET "/" for 76.170.76.148 at 2013-04-17 21:45:40 -0600
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "}"
+  (in /home2/getraftc/candicedalan/app/assets/stylesheets/pages.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title FFTF | Home
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/pages.css.scss:23
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml__3268583442578906089_18511960'
+
+
+Started GET "/" for 76.170.76.148 at 2013-04-17 21:47:23 -0600
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "}"
+  (in /home2/getraftc/candicedalan/app/assets/stylesheets/pages.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title FFTF | Home
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/pages.css.scss:23
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml__3268583442578906089_18511960'
+
+
+Started GET "/" for 76.170.76.148 at 2013-04-17 21:47:24 -0600
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "}"
+  (in /home2/getraftc/candicedalan/app/assets/stylesheets/pages.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title FFTF | Home
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/pages.css.scss:23
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml__3268583442578906089_18511960'
+
+

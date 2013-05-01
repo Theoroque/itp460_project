@@ -1,0 +1,53 @@
+:css
+  /* Override some defaults */
+  html, body {
+    background-color: #eee;
+  }
+  body {
+    padding-top: 40px;
+  }
+  .container {
+    width: 300px;
+  }
+
+  /* The white background content wrapper */
+  .container > .content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 -20px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  }
+
+  .login-form {
+  margin-left: 65px;
+  }
+
+  legend {
+  margin-right: -50px;
+  font-weight: bold;
+    color: #404040;
+  }
+.container
+  .content
+    .row
+      .login-form
+        %h2 Login
+        = form_tag user_session_path do
+          %fieldset
+            .clearfix
+              = text_field_tag 'user[email]'
+
+            .clearfix
+              = password_field_tag 'user[password]'
+
+            .clearfix
+              = check_box_tag 'user[remember_me]'
+              = label_tag 'user[remember_me]', 'Remember me'
+            %button.btn.primary{:type => "submit"} Sign in
+            = link_to "Forgot your password?", new_password_path('user')
+

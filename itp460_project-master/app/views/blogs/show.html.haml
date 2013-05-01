@@ -1,0 +1,91 @@
+#container
+  #header
+    #title
+      = link_to image_tag( 'header.png'), root_url
+    = image_tag 'organic.png', :id => 'logo'
+  .clear
+  #nav
+    %ul
+      %li=link_to 'HOME',  root_url
+      %li=link_to 'ABOUT',  about_url
+      %li
+        - if @article.category_id == 1
+          =link_to 'FRUITY',  fruity_url, :class => "nav-selected"
+        - else
+          =link_to 'FRUITY',  fruity_url
+      %li
+        - if @article.category_id == 2
+          =link_to 'FAMILY',  family_url, :class => "nav-selected"
+        - else
+          =link_to 'FAMILY',  family_url
+      %li
+        - if @article.category_id == 3
+          =link_to 'BEAUTY',  beauty_url, :class => "nav-selected"
+        - else
+          =link_to 'BEAUTY',  beauty_url
+      %li
+        - if @article.category_id == 4
+          =link_to 'HOUSE',  house_url, :class => "nav-selected"
+        - else
+          =link_to 'HOUSE',  house_url
+      %li
+        - if @article.category_id == 5
+          =link_to 'BEYOND',  beyond_url, :class => "nav-selected"
+        - else
+          =link_to 'BEYOND',  beyond_url
+  .clear
+  - if notice
+    :javascript
+      alert("#{notice}")
+  - if alert
+    :javascript
+      alert("#{alert}")
+
+  #main
+    #slideshow
+      %img#header-img{:src => "#{@article.mainPhoto}"}/
+    .clear
+
+
+
+
+    #article-title-background
+    #article-title
+      %h2.article-header
+        = @article.title.upcase
+        %br
+      %span.article-date
+      = @article.created_at.strftime("%B #{@article.created_at.day.ordinalize}, %Y")
+
+  #article-body
+    = @article.content.html_safe
+
+  %hr
+  %h1
+    Comments
+  - Comment.where("article_id = ? AND approved = ?", @article.id, true).each do |c|
+    .post
+      %p
+        #{c.name} says:
+        %br
+        #{c.comment}
+      %span.comments-time #{c.created_at.to_formatted_s(:long)}
+
+  #comment
+    = form_for @comment do |f|
+      - if @comment.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@comment.errors.count, "error")} prohibited this comment from being saved:"
+          %ul
+            - @comment.errors.full_messages.each do |msg|
+              %li= msg
+
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :comment
+        = f.text_area :comment
+      = f.hidden_field :article_id, value: @article.id
+      .actions
+        = f.submit 'Comment'

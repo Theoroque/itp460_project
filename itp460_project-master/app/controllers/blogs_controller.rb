@@ -9,10 +9,17 @@ class BlogsController < ApplicationController
     @comment = Comment.new
     @featured = Article.all
 
+
+    if !@article.published && !user_signed_in?
+      redirect_to root_url
+    else
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blog }
     end
+
+    end
+
   end
 
   # GET /blogs/new

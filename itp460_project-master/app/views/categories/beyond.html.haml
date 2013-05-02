@@ -238,7 +238,7 @@
         =link_to 'BEYOND',  beyond_url, :class => "nav-selected"
   .clear
   %a.feature_landing{:href => "beauty_why-i-stopped-dyeing-my-hair.html"}
-    .feature_top
+    .feature_top{:onclick => "window.location = 'http://candicedalan.getraft.com#{blog_path(@featured.first)}'"}
       %p.feature_heading Featured Blog
     #featured-title.feature_title
       = @featured.first.title.upcase
@@ -268,6 +268,6 @@
       %p All Blog Articles
   - for article in @articles
     .thumbnail{:style => "background-image:url('#{article.mainPhoto}');"}
-      .hovereffect_thumbnail
+      .hovereffect_thumbnail{:onclick => "window.location = 'http://candicedalan.getraft.com#{blog_path(article)}'"}
         = article.title.upcase
 

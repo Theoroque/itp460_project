@@ -22,25 +22,25 @@ class CategoriesController < ApplicationController
   end
 
   def fruity
-    @featured = Article.where("featured = true && category_id = 1").order("created_at DESC").all
-    @articles = Article.where("category_id = 1").order("created_at DESC").all
+    @featured = Article.where("featured = true && published = true && category_id = 1").order("created_at DESC").all
+    @articles = Article.where("category_id = 1 && published = true ").order("created_at DESC").all
 
   end
   def family
-    @featured = Article.where("featured = true && category_id = 2").order("created_at DESC").all
-    @articles = Article.where("category_id = 2").order("created_at DESC").all
+    @featured = Article.where("featured = true  && published = true  && category_id = 2").order("created_at DESC").all
+    @articles = Article.where("category_id = 2 && published = true ").order("created_at DESC").all
   end
   def beauty
-    @featured = Article.where("featured = true && category_id = 3").order("created_at DESC").all
-    @articles = Article.where("category_id = 3").order("created_at DESC").all
+    @featured = Article.where("featured = true  && published = true  && category_id = 3").order("created_at DESC").all
+    @articles = Article.where("category_id = 3 && published = true ").order("created_at DESC").all
   end
   def house
-    @featured = Article.where("featured = true && category_id = 4").order("created_at DESC").all
-    @articles = Article.where("category_id = 4").order("created_at DESC").all
+    @featured = Article.where("featured = true  && published = true  && category_id = 4").order("created_at DESC").all
+    @articles = Article.where("category_id = 4 && published = true ").order("created_at DESC").all
   end
   def beyond
-    @featured = Article.where("featured = true && category_id = 5").order("created_at DESC").all
-    @articles = Article.where("category_id = 5").order("created_at DESC").all
+    @featured = Article.where("featured = true  && published = true  && category_id = 5").order("created_at DESC").all
+    @articles = Article.where("category_id = 5 && published = true ").order("created_at DESC").all
   end
 
   def show

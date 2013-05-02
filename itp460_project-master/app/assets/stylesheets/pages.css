@@ -209,9 +209,15 @@ body, header, a , ul, h1 {
   font-weight:bold;
 }
 
-  #header-img {
-    margin:0px 0px 15px 0px;
+#header img {
+    margin:10px;
     border-radius:15px;
+    height: 120px;
+    top: 30px;
+  }
+#title img {
+    margin:10px;
+    height:120px;
 
   }
 

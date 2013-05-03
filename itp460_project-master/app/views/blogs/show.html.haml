@@ -82,10 +82,10 @@
 
       .field
         = f.label :name
-        = f.text_field :name
+      = f.text_field :name
       .field
         = f.label :comment
-        = f.text_area :comment
+      = f.text_area :comment, :rows => 5, :cols => 30, :resizable => false
       = f.hidden_field :article_id, value: @article.id
       .actions
-        = f.submit 'Comment'
+        = f.submit 'Submit'
